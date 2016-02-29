@@ -20,6 +20,7 @@
     (for a total price so far of 95).
 */
 
+using System.Collections.Generic;
 using NUnit.Framework;
 
 namespace Checkout
@@ -38,7 +39,15 @@ namespace Checkout
         public void Test(string items, double price)
         {
             // Arrange
-            var checkout = new Checkout(new Rules());
+            var checkout = new Checkout(new Rules(new List<Rule>
+            {
+                new ARule(),
+                new BRule(),
+                new CRule(),
+                new DRule(),
+                new ADiscountRule(),
+                new BDiscountRule()
+            }));
 
             foreach (var item in items)
             {
