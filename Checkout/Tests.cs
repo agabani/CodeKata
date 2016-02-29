@@ -39,7 +39,7 @@ namespace Checkout
         public void Test(string items, double price)
         {
             // Arrange
-            var checkout = new Checkout(new Rules(new List<Rule>
+            var checkout = new Checkout(new List<Rule>
             {
                 new ARule(),
                 new BRule(),
@@ -47,7 +47,7 @@ namespace Checkout
                 new DRule(),
                 new ADiscountRule(),
                 new BDiscountRule()
-            }));
+            });
 
             foreach (var item in items)
             {

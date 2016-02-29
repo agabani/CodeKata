@@ -6,9 +6,9 @@ namespace Checkout
     public class Checkout
     {
         private readonly List<char> _items = new List<char>();
-        private readonly Rules _rules;
+        private readonly List<Rule> _rules;
 
-        public Checkout(Rules rules)
+        public Checkout(List<Rule> rules)
         {
             _rules = rules;
         }
