@@ -3,7 +3,7 @@ using System.Linq;
 
 namespace Checkout.Rules
 {
-    public class DRule : Rule
+    public sealed class DRule : Rule
     {
         public override double Calculate(IEnumerable<char> items)
         {
