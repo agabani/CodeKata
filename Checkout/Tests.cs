@@ -37,7 +37,7 @@ namespace Checkout
         [TestCase("AA", 100d)]
         [TestCase("AAA", 130d)]
         [TestCase("AAABB", 175d)]
-        public void Test(string items, double price)
+        public void Test(string items, double expectedPrice)
         {
             // Arrange
             var checkout = new Checkout(new List<IRule>
@@ -56,10 +56,10 @@ namespace Checkout
             }
 
             // Act
-            var total = checkout.CalculateTotalPrice();
+            var totalPrice = checkout.CalculateTotalPrice();
 
             // Assert
-            Assert.That(total, Is.EqualTo(price));
+            Assert.That(totalPrice, Is.EqualTo(expectedPrice));
         }
     }
 }
