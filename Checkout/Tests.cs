@@ -40,14 +40,14 @@ namespace Checkout
         public void Test(string items, double price)
         {
             // Arrange
-            var checkout = new Checkout(new List<Rule>
+            var checkout = new Checkout(new List<IRule>
             {
-                new APriceRule(),
-                new BPriceRule(),
-                new CPriceRule(),
-                new DPriceRule(),
-                new AOfferRule(),
-                new BOfferRule()
+                new PriceRule('A', 50),
+                new PriceRule('B', 30),
+                new PriceRule('C', 20),
+                new PriceRule('D', 15),
+                new DiscountRule('A', 3, 20),
+                new DiscountRule('B', 2, 15)
             });
 
             foreach (var item in items)
@@ -56,7 +56,7 @@ namespace Checkout
             }
 
             // Act
-            var total = checkout.Total();
+            var total = checkout.CalculateTotalPrice();
 
             // Assert
             Assert.That(total, Is.EqualTo(price));

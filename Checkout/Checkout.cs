@@ -7,9 +7,9 @@ namespace Checkout
     public class Checkout
     {
         private readonly List<char> _items = new List<char>();
-        private readonly List<Rule> _rules;
+        private readonly List<IRule> _rules;
 
-        public Checkout(List<Rule> rules)
+        public Checkout(List<IRule> rules)
         {
             _rules = rules;
         }
@@ -19,7 +19,7 @@ namespace Checkout
             _items.Add(item);
         }
 
-        public double Total()
+        public double CalculateTotalPrice()
         {
             return _rules.Sum(rule => rule.Calculate(_items));
         }

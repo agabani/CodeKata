@@ -45,13 +45,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Checkout.cs" />
-    <Compile Include="Rules\AOfferRule.cs" />
-    <Compile Include="Rules\APriceRule.cs" />
-    <Compile Include="Rules\BOfferRule.cs" />
-    <Compile Include="Rules\BPriceRule.cs" />
-    <Compile Include="Rules\CPriceRule.cs" />
-    <Compile Include="Rules\DPriceRule.cs" />
-    <Compile Include="Rules\Rule.cs" />
+    <Compile Include="Rules\DiscountRule.cs" />
+    <Compile Include="Rules\IRule.cs" />
+    <Compile Include="Rules\PriceRule.cs" />
     <Compile Include="Tests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
