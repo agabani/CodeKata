@@ -4,6 +4,6 @@ namespace Checkout.Rules
 {
     public interface IRule
     {
-        double Calculate(IEnumerable<char> items);
+        double CalculatePriceDelta(IEnumerable<char> items);
     }
 }

@@ -21,7 +21,7 @@ namespace Checkout
 
         public double CalculateTotalPrice()
         {
-            return _rules.Sum(rule => rule.Calculate(_items));
+            return _rules.Sum(rule => rule.CalculatePriceDelta(_items));
         }
     }
 }

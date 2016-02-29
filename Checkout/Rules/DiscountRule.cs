@@ -16,7 +16,7 @@ namespace Checkout.Rules
             _discount = discount;
         }
 
-        public double Calculate(IEnumerable<char> items)
+        public double CalculatePriceDelta(IEnumerable<char> items)
         {
             return -(items.Count(item => item.Equals(_item))/_quantity)*_discount;
         }
