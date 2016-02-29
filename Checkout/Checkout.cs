@@ -19,7 +19,8 @@ namespace Checkout
         public double Total()
         {
             return _items.Count(i => i.Equals('A'))*50 + _items.Count(i => i.Equals('B'))*30 +
-                   _items.Count(i => i.Equals('C'))*20 + _items.Count(i => i.Equals('D'))*15;
+                   _items.Count(i => i.Equals('C'))*20 + _items.Count(i => i.Equals('D'))*15 -
+                   _items.Count(i => i.Equals('A'))/3*20 - _items.Count(i => i.Equals('B'))/2*15;
         }
     }
 }
