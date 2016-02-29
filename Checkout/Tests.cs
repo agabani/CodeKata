@@ -20,7 +20,6 @@
     (for a total price so far of 95).
 */
 
-using System.Linq;
 using NUnit.Framework;
 
 namespace Checkout
