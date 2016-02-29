@@ -21,6 +21,7 @@
 */
 
 using System.Collections.Generic;
+using Checkout.Rules;
 using NUnit.Framework;
 
 namespace Checkout

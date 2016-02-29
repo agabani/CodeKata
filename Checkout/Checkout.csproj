@@ -45,7 +45,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Checkout.cs" />
-    <Compile Include="Rule.cs" />
+    <Compile Include="Rules\ADiscountRule.cs" />
+    <Compile Include="Rules\ARule.cs" />
+    <Compile Include="Rules\BDiscountRule.cs" />
+    <Compile Include="Rules\BRule.cs" />
+    <Compile Include="Rules\CRule.cs" />
+    <Compile Include="Rules\DRule.cs" />
+    <Compile Include="Rules\Rule.cs" />
     <Compile Include="Tests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
