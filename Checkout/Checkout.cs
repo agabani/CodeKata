@@ -7,9 +7,9 @@ namespace Checkout
     public class Checkout
     {
         private readonly List<char> _items = new List<char>();
-        private readonly List<IRule> _rules;
+        private readonly List<IPriceDeltaRule> _rules;
 
-        public Checkout(List<IRule> rules)
+        public Checkout(List<IPriceDeltaRule> rules)
         {
             _rules = rules;
         }

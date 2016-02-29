@@ -2,7 +2,7 @@
 
 namespace Checkout.Rules
 {
-    public interface IRule
+    public interface IPriceDeltaRule
     {
         double CalculatePriceDelta(IEnumerable<char> items);
     }

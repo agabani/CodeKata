@@ -40,14 +40,14 @@ namespace Checkout
         public void Test(string items, double expectedPrice)
         {
             // Arrange
-            var checkout = new Checkout(new List<IRule>
+            var checkout = new Checkout(new List<IPriceDeltaRule>
             {
-                new PriceRule('A', 50),
-                new PriceRule('B', 30),
-                new PriceRule('C', 20),
-                new PriceRule('D', 15),
-                new DiscountRule('A', 3, 20),
-                new DiscountRule('B', 2, 15)
+                new PriceDeltaRule('A', 50),
+                new PriceDeltaRule('B', 30),
+                new PriceDeltaRule('C', 20),
+                new PriceDeltaRule('D', 15),
+                new DiscountPriceDeltaRule('A', 3, -20),
+                new DiscountPriceDeltaRule('B', 2, -15)
             });
 
             foreach (var item in items)

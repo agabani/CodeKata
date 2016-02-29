@@ -45,9 +45,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Checkout.cs" />
-    <Compile Include="Rules\DiscountRule.cs" />
-    <Compile Include="Rules\IRule.cs" />
-    <Compile Include="Rules\PriceRule.cs" />
+    <Compile Include="Rules\DiscountPriceDeltaRule.cs" />
+    <Compile Include="Rules\IPriceDeltaRule.cs" />
+    <Compile Include="Rules\PriceDeltaRule.cs" />
     <Compile Include="Tests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
