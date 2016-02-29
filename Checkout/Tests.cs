@@ -42,12 +42,12 @@ namespace Checkout
             // Arrange
             var checkout = new Checkout(new List<Rule>
             {
-                new ARule(),
-                new BRule(),
-                new CRule(),
-                new DRule(),
-                new ADiscountRule(),
-                new BDiscountRule()
+                new APriceRule(),
+                new BPriceRule(),
+                new CPriceRule(),
+                new DPriceRule(),
+                new AOfferRule(),
+                new BOfferRule()
             });
 
             foreach (var item in items)

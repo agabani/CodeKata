@@ -3,11 +3,11 @@ using System.Linq;
 
 namespace Checkout.Rules
 {
-    public sealed class ADiscountRule : Rule
+    public sealed class BOfferRule : Rule
     {
         public override double Calculate(IEnumerable<char> items)
         {
-            return -items.Count(i => i.Equals('A'))/3*20;
+            return -items.Count(i => i.Equals('B'))/2*15;
         }
     }
 }
