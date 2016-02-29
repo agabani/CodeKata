@@ -46,8 +46,8 @@ namespace Checkout
                 new PriceDeltaRule('B', 30),
                 new PriceDeltaRule('C', 20),
                 new PriceDeltaRule('D', 15),
-                new DiscountPriceDeltaRule('A', 3, -20),
-                new DiscountPriceDeltaRule('B', 2, -15)
+                new MultiPriceDeltaRule('A', 3, -20),
+                new MultiPriceDeltaRule('B', 2, -15)
             });
 
             foreach (var item in items)

@@ -3,13 +3,13 @@ using System.Linq;
 
 namespace Checkout.Rules
 {
-    public sealed class DiscountPriceDeltaRule : IPriceDeltaRule
+    public sealed class MultiPriceDeltaRule : IPriceDeltaRule
     {
         private readonly char _item;
         private readonly int _quantity;
         private readonly double _discount;
 
-        public DiscountPriceDeltaRule(char item, int quantity, double discount)
+        public MultiPriceDeltaRule(char item, int quantity, double discount)
         {
             _item = item;
             _quantity = quantity;
